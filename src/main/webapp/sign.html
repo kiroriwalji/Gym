@@ -3,119 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign In Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css" integrity="sha512-DJLNx+VLY4aEiEQFjiawXaiceujj5GA7lIY8CHCIGQCBPfsEG0nGz1edb4Jvw1LR7q031zS5PpPqFuPA8ihlRA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        *{
+        * {
             box-sizing: border-box;
-            margin: 0px;
-            padding: 0px;
-            /* font-size: 20px; */
+            margin: 0;
+            padding: 0;
         }
-        ::placeholder
-        {
-            color:white;
+        ::placeholder {
+            color: white;
         }
-        body{
+        body {
             height: 100vh;
         }
-        .nav{
+        .nav {
             padding: 10px;
             background-color: black;
-            color:  #42047e 0%,whitesmoke;
+            color: whitesmoke;
             text-align: right;
         }
-        button{
+        button {
             padding: 5px 20px;
             border-radius: 30px;
-            /* border: 2px solid black;     */
             border: none;
             cursor: pointer;
             font-size: 10px;
             margin-right: 10px;
         }
-        .nav button:hover{
+        .nav button:hover {
             background-color: #c11325;
             color: white;
         }
-        .nav button:hover a{
+        .nav button:hover a {
             color: white;
         }
-        a{
+        a {
             color: black;
             text-decoration: none;
         }
-        .fa-solid{
-            color:black;
+        .fa-solid {
+            color: black;
         }
-        .log-box{
+        .log-box {
             width: 100%;
             background-image: url(images/home.jpg);
             background-position: center;
-            background-size:fill;
+            background-size: fill;
             background-repeat: no-repeat;
-            height: 92.4vh;
-            
-            /* background: linear-gradient(90deg, #42047e 0%, rgba(9,9,121,1) 44%, #07f49e 100%); */
-            color: white;
+            height: 91.4vh;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
         }
-        .log{
-            /* border: 2px solid black; */
-            width: 100%;
-            padding: 50px;
+        .log {
+            /* padding: 50px; */
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 400px;
+            width: 500px;
+            background-color: rgba(0, 0, 0, 0.7);
             border-radius: 10%;
+            /* border: 2px solid red ; */
         }
-        input{
-            margin: 20px 0px;
-            border-radius:5px;
+        input {
+            margin: 2px 0;
+            border-radius: 5px;
             border: 2px solid #c11325;
             font-size: 15px;
             padding: 10px;
-            border-top:none ;
-            border-left:none ;
+            border-top: none;
+            border-left: none;
             border-right: none;
             background-color: transparent;
             color: white;
+            width: 100%;
         }
-        .butt{
-            background-color:#c11325;
+        .butt {
+            background-color: #c11325;
             color: white;
             font-weight: bolder;
             letter-spacing: 3px;
             width: 100%;
         }
-        form{
-            width: 70%;
+        form {
+            width: 80%;
             color: white;
-            /* border: 2px solid black; */
         }
-        .b1
-        {
-            margin:0px ;
+        .b1 {
+            margin: 0;
         }
     </style>
 </head>
 <body>
     <div class="nav">
         <button><a href="index.html">Home</a></button>
-       <button><a href="sign.html"><i class="fa-solid fa-user"></i>Sign Up</a></button>
+        <button><a href="login.html"><i class="fa-solid fa-user"></i>Log in</a></button>
     </div>
     <div class="log-box">
         <div class="log">
-
-            <form action="log" method="get">
-                <br>
-                <input type="text" name="username" placeholder="UserName"/>
-                <br>
-                <input type="text" name="password" placeholder="Password"/>
-                <div class="b1"><input type="checkbox"> Remember Me</div>
-                <input type="submit" name="submit" class="butt">
+            <form action="sign" method="post">
+                <input type="text" name="name" placeholder="Name" required/>
+                <input type="password" name="password" placeholder="Password" required/>
+                <input type="text" name="aadhar" placeholder="Aadhar Number" required/>
+                <input type="text" name="mobile" placeholder="Mobile Number" required/>
+                <input type="text" name="duration" placeholder="Duration" required/>
+                <div class="b1">
+                    <input type="checkbox" name="remember" /> Remember Me
+                </div>
+                <input type="submit" name="submit" class="butt" value="Sign In"/>
             </form>
-    
         </div>
     </div>
 </body>
